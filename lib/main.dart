@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './pages/loginpage.dart';
+import './pages/quote_form.dart';
 
 void main() => runApp(new MyApp());
 

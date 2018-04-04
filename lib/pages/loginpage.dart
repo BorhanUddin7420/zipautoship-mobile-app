@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'quote_form.dart';
 
 class LoginPage extends StatefulWidget{
   @override
@@ -53,7 +54,12 @@ class LoginPageState extends State<LoginPage> with SingleTickerProviderStateMixi
                 color: Colors.green,
                 child: new Text("Get A Quote"),
                 textColor: Colors.white,
-                onPressed: ()=> {},
+               onPressed: () {
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(builder: (context) => new QuoteForm()),
+                  );
+                }
               )
             ],
           )
