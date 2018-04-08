@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quote_form.dart';
+import 'orderlist.dart';
 
 class LoginPage extends StatefulWidget{
   @override
@@ -15,7 +16,7 @@ class LoginPageState extends State<LoginPage> with SingleTickerProviderStateMixi
   void initState() {
       // TODO: implement initState
       super.initState();
-      _logoAnimationController = new AnimationController( vsync: this, duration: new Duration(milliseconds: 1500));
+      _logoAnimationController = new AnimationController( vsync: this, duration: new Duration(milliseconds: 1000));
       _logoAnimation = new CurvedAnimation( parent: _logoAnimationController , curve: Curves.easeInOut);
 
 
@@ -51,6 +52,7 @@ class LoginPageState extends State<LoginPage> with SingleTickerProviderStateMixi
                 padding: const EdgeInsets.all(20.0),
               ),
               new MaterialButton(
+                padding: const EdgeInsets.symmetric(horizontal: 60.0),
                 color: Colors.green,
                 child: new Text("Get A Quote"),
                 textColor: Colors.white,
@@ -60,7 +62,22 @@ class LoginPageState extends State<LoginPage> with SingleTickerProviderStateMixi
                     new MaterialPageRoute(builder: (context) => new QuoteForm()),
                   );
                 }
-              )
+              ),
+              new Padding(
+                padding: const EdgeInsets.only(top: 20.0),
+              ),
+               new MaterialButton(
+                 padding: const EdgeInsets.symmetric(horizontal: 55.0),
+                color: Colors.blueAccent,
+                child: new Text("Get Order List"),
+                textColor: Colors.white,
+               onPressed: () {
+                  Navigator.push(
+                    context,
+                    new MaterialPageRoute(builder: (context) => new OrderList()),
+                  );
+                }
+              ),
             ],
           )
         ],

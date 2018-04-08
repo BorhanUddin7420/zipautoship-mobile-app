@@ -7,6 +7,7 @@ class QuoteForm extends StatelessWidget {
     return new MaterialApp(
       theme: new ThemeData(
         primarySwatch: Colors.indigo,
+        brightness: Brightness.light
       ),
       home: new NewQuoteForm(title: 'New Quote'),
     );
